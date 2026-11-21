@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pengaduan Masyarakat</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#f3f5fa;--sf:#fff;--tx:#12203f;--mu:#586279;--pr:#0b2a5b;--pt:#fff;--ac:#f5a524;--at:#12203f;--bd:#d9dfec;--ok:#16794a;--wr:#a85a00;--er:#b3261e;--in:#1d5fd1;--pu:#7a3fc4;--hl:#eaf0fb;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){color-scheme:dark;--bg:#0c1426;--sf:#142039;--tx:#e8ecf6;--mu:#a1abc2;--pr:#8db4ff;--pt:#0c1426;--ac:#f5b441;--bd:#27355a;--ok:#4cc58a;--wr:#f0a04b;--er:#ff8a80;--in:#7ab0ff;--pu:#c3a0f5;--hl:#1a2a4d}}
+:root[data-theme=dark]{color-scheme:dark;--bg:#0c1426;--sf:#142039;--tx:#e8ecf6;--mu:#a1abc2;--pr:#8db4ff;--pt:#0c1426;--ac:#f5b441;--bd:#27355a;--ok:#4cc58a;--wr:#f0a04b;--er:#ff8a80;--in:#7ab0ff;--pu:#c3a0f5;--hl:#1a2a4d}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 Poppins,system-ui,-apple-system,"Segoe UI",sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--sf);z-index:10}
+a{color:var(--pr)}h1,h2,h3{line-height:1.25;margin:0 0 .5em}
+:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--sf);border-bottom:1px solid var(--bd);z-index:9}
+.w{max-width:1040px;margin:0 auto;padding:0 16px}
+.hd{display:flex;align-items:center;gap:12px;padding:10px 0;flex-wrap:wrap}
+.brand{font-weight:700;color:var(--pr);text-decoration:none;font-size:1.05rem;margin-right:auto}
+nav{display:flex;gap:2px;overflow-x:auto;max-width:100%}
+nav a{padding:6px 12px;border-radius:8px;text-decoration:none;color:var(--mu);font-size:.9rem;white-space:nowrap;font-weight:500}
+nav a[aria-current=page]{background:var(--hl);color:var(--pr)}
+main{padding:24px 0 48px;min-height:70vh}
+.card{background:var(--sf);border:1px solid var(--bd);border-radius:12px;padding:18px}
+.btn{display:inline-block;border:1px solid var(--bd);background:var(--sf);color:var(--tx);padding:10px 18px;border-radius:10px;font:600 .95rem Poppins,system-ui,sans-serif;cursor:pointer;text-decoration:none}
+.btn.a{background:var(--ac);color:var(--at);border-color:var(--ac)}.btn.p{background:var(--pr);color:var(--pt);border-color:var(--pr)}.btn.d{color:var(--er);border-color:var(--er)}.btn.s{padding:5px 12px;font-size:.85rem}
+.hero{background:var(--pr);color:var(--pt);border-radius:16px;padding:40px 24px;margin-bottom:20px}
+.hero h1{font-size:clamp(1.7rem,5vw,2.6rem);max-width:18ch}.hero p{max-width:52ch;opacity:.92;margin:0 0 20px}
+.g{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.st b{display:block;font-size:2rem;color:var(--pr);line-height:1.2}.st span{color:var(--mu);font-size:.9rem}
+.step{display:flex;gap:12px}.step i{flex:none;width:34px;height:34px;border-radius:50%;background:var(--hl);color:var(--pr);display:grid;place-items:center;font-style:normal;font-weight:700}
+.step p{margin:0;color:var(--mu);font-size:.9rem}
+.b{display:inline-block;padding:2px 10px;border-radius:99px;font-size:.78rem;font-weight:600;background:color-mix(in srgb,currentColor 14%,transparent)}
+.s0{color:var(--in)}.s1{color:var(--pu)}.s2{color:var(--wr)}.s3{color:var(--ok)}.s4{color:var(--er)}
+.m{color:var(--mu);font-size:.85rem}
+label{display:block;font-weight:600;font-size:.9rem;margin:14px 0 4px}
+input,select,textarea{width:100%;padding:10px 12px;border:1px solid var(--bd);border-radius:10px;background:var(--bg);color:var(--tx);font:inherit}
+input:disabled{opacity:.6;cursor:not-allowed}
+input[type=checkbox]{width:auto}.ck{display:flex;gap:8px;align-items:center;margin:14px 0 0}.ck label{margin:0}
+.er{color:var(--er);font-size:.82rem;min-height:1.2em;margin-top:3px}
+.tl{list-style:none;margin:16px 0 0;padding:0 0 0 18px;border-left:2px solid var(--bd)}
+.tl li{position:relative;margin-bottom:16px;padding-left:12px}.tl li::before{content:"";position:absolute;left:-26px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--pr);border:3px solid var(--sf)}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}.row>*{flex:1 1 160px;width:auto}
+.tw{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:.9rem}th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--bd);vertical-align:top}
+.bar{display:grid;grid-template-columns:130px 1fr 28px;gap:8px;align-items:center;font-size:.85rem;margin:6px 0}.bar div{height:12px;background:var(--hl);border-radius:6px;overflow:hidden}.bar div i{display:block;height:100%;background:var(--pr);transition:width .25s}
+details{border-bottom:1px solid var(--bd);padding:12px 0}summary{cursor:pointer;font-weight:600}
+dialog{border:1px solid var(--bd);border-radius:14px;background:var(--sf);color:var(--tx);width:min(580px,94vw);padding:20px}dialog::backdrop{background:#0008}
+.ok{border-color:var(--ok)}.tk{font-size:1.5rem;font-weight:700;color:var(--pr);letter-spacing:.02em;margin:8px 0}
+.thumbs{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}.thumbs img{width:84px;height:84px;object-fit:cover;border-radius:8px;border:1px solid var(--bd)}
+footer{border-top:1px solid var(--bd);padding:18px 0;color:var(--mu);font-size:.85rem;text-align:center}
+</style></head><body>
+<header><div class="w hd"><a class="brand" href="#beranda">Pengaduan Masyarakat</a>
+<nav id="nav" aria-label="Menu utama"></nav><button class="btn s" id="th" type="button" aria-label="Ganti tema">Tema</button></div></header>
+<main class="w" id="app"></main>
+<footer><div class="w">Layanan Pengaduan Pemerintah Kelurahan. Data pada situs ini adalah contoh dan tersimpan di peramban Anda.</div></footer>
+<dialog id="dlg"></dialog>
+<script>
